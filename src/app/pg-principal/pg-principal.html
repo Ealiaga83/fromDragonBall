@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Lista de Personajes de la serie DragonBall Z</h1>
+  <div class="card-container">
+    @for (personaje of personajes; track personaje.id) {
+      <div class="card">
+        <img [src]="personaje.image" alt="{{ personaje.name }}">
+        <div class="card-content">
+          <h2>{{ personaje.name }}</h2>
+          <p><strong>Raza:</strong> {{ personaje.race }}</p>
+          <p><strong>Género:</strong> {{ personaje.gender }}</p>
+          <p><strong>Ki Base:</strong> {{ personaje.ki }}</p>
+          <p><strong>Ki Total:</strong> {{ personaje.maxKi }}</p>
+          <p><strong>Afiliación:</strong> {{ personaje.affiliation }}</p>
+        </div>
+      </div>
+    }
+  </div>
+</div>
