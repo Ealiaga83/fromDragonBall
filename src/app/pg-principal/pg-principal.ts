@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, } from '@angular/core';
-import { DragonballService } from '../service/dragonball-services';
+import { DragonballService } from '../service/dragonball-service';
 
 @Component({
   selector: 'app-pg-principal',
@@ -14,7 +14,7 @@ export class PgPrincipal {
   constructor(private dragonballService: DragonballService) { }
 
   ngOnInit(): void {
-    this.dragonballService.getCharacters().subscribe(data => {
+    this.dragonballService.obtenerData().subscribe(data => {
       this.personajes = data;
     });
   }

@@ -13,7 +13,7 @@ export class DragonballService {
 
   constructor(private http: HttpClient) { }
 
-  getCharacters(): Observable<Character[]> {
+  obtenerData(): Observable<Character[]> {
     return this.http.get<ApiResponse>(this.apiUrl).pipe(
       map(response => response.items)
     );
